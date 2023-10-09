@@ -1,0 +1,30 @@
+---
+import Square from "./Square.astro";
+---
+
+<section>
+	<h2>Categorías</h2>
+	<ul>
+		<Square href="/comida" name="Comida" src="https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2023/02/Peruvian-street-food-blog-exploor-peru.png?fit=775%2C480&ssl=1"/>
+		<Square href="/diversion" name="Diversión" src="https://i.pinimg.com/originals/73/28/c0/7328c08f1f853f565ac3f9082bfaf4f4.jpg" />
+		<Square href="/comida" name="Comida" src="https://i0.wp.com/www.exploorperu.com/wp-content/uploads/2023/02/Peruvian-street-food-blog-exploor-peru.png?fit=775%2C480&ssl=1"/>
+		<Square href="/diversion" name="Diversión" src="https://i.pinimg.com/originals/73/28/c0/7328c08f1f853f565ac3f9082bfaf4f4.jpg" />
+	</ul>
+</section>
+
+<style>
+	section {
+		padding-left: 16px;
+	}
+	ul::-webkit-scrollbar {
+		display: none;
+	}
+	ul {
+		list-style: none;
+		overflow-x: scroll;
+		display: flex;
+		gap: 8px;
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+</style>

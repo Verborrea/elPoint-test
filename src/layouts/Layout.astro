@@ -1,0 +1,52 @@
+---
+import '@fontsource-variable/inter';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es-PE">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--error: #EB4649;
+		--success: #42EF87;
+		--warning: #F4CF4B;
+		--primary: #EDEDED;
+		--secondary: #AFAFAF;
+		--background: #050505;
+
+		/* background: radial-gradient(circle, rgba(26,44,61,1) 0%, rgba(15,15,15,1) 100%); */
+		background: rgba(26,44,61,1);
+		color: var(--secondary);
+	}
+	* {
+		font-family: 'Inter Variable', sans-serif !important;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	h1, h2, h3, h4, h5, h6, a {
+		color: var(--primary);
+	}
+	h2 {
+		font-size: 22px;
+		line-height: 22px;
+		margin-bottom: 10px;
+	}
+</style>

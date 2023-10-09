@@ -1,0 +1,28 @@
+---
+import Square from "./Square.astro";
+---
+
+<section>
+	<h2>Recién Agregados</h2>
+	<ul>
+		<Square href="/points/el-bar-de-moe" name="El bar de Moe" src="https://media-cdn.tripadvisor.com/media/photo-s/1c/2b/6b/07/perfecto.jpg" details="restobar · 2.4 KM"/>
+		<Square href="/points/zoom" name="Zoom" src="https://c95168aa01.cbaul-cdnwnd.com/84f2c81e8a3dfbbf5d3d15ee60aac2e5/system_preview_detail_200000458-12f3213ed8/zoom.jpg" details="discoteca · 530 M"/>
+	</ul>
+</section>
+
+<style>
+	section {
+		padding-left: 16px;
+	}
+	ul::-webkit-scrollbar {
+		display: none;
+	}
+	ul {
+		list-style: none;
+		overflow-x: scroll;
+		display: flex;
+		gap: 8px;
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+</style>

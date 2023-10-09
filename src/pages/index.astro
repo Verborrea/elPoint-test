@@ -1,0 +1,77 @@
+---
+import SearchBar from "../components/SearchBar.astro";
+import Layout from "../layouts/Layout.astro";
+import Categorias from "../components/Categorias.astro";
+import Destacados from "../components/Destacados.astro";
+import RecienA from "../components/RecienA.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<header>
+		<h1>elPoint</h1>
+		<div class="buttons">
+			<a href="/crear" title="Añadir Point">
+				<svg
+					width="22"
+					height="22"
+					viewBox="0 0 22 22"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M11 20.4286C16.2073 20.4286 20.4286 16.2073 20.4286 11C20.4286 5.79274 16.2073 1.57143 11 1.57143C5.79274 1.57143 1.57143 5.79274 1.57143 11C1.57143 16.2073 5.79274 20.4286 11 20.4286ZM11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z"
+						fill="#EDEDED"></path>
+					<path
+						d="M11 5.2381C10.4215 5.2381 9.95238 5.70714 9.95238 6.28571V9.95238H6.28571C5.70717 9.95238 5.2381 10.4214 5.2381 11C5.2381 11.5786 5.70717 12.0476 6.28571 12.0476H9.95238V15.7143C9.95238 16.2929 10.4215 16.7619 11 16.7619C11.5785 16.7619 12.0476 16.2929 12.0476 15.7143V12.0476H15.7143C16.2928 12.0476 16.7619 11.5786 16.7619 11C16.7619 10.4214 16.2928 9.95238 15.7143 9.95238H12.0476V6.28571C12.0476 5.70714 11.5785 5.2381 11 5.2381Z"
+						fill="#D9D9D9"></path>
+				</svg>
+			</a>
+			<a href="/profile" title="Mi perfil">
+				<img src="/profile.png" alt="Foto de perfil de debajo_del_mantel" width="22"/>
+			</a>
+		</div>
+	</header>
+	<main>
+		<SearchBar />
+		<Categorias />
+		<Destacados />
+		<RecienA />
+	</main>
+	<footer>
+		<p>&copy; 2023 elPoint</p>
+	</footer>
+</Layout>
+
+<style>
+	header {
+		display: flex;
+		padding: 16px;
+		justify-content: space-between;
+	}
+	h1 {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.buttons {
+		display: flex;
+		align-items: center;
+   		gap: 8px;
+	}
+	svg, img {
+		display: block;
+	}
+	img {
+		border-radius: 50%;
+	}
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	footer {
+		text-align: center;
+		padding: 20px;
+	}
+</style>

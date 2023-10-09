@@ -1,0 +1,33 @@
+---
+interface Props {
+	href: string;
+	name: string;
+	src: string;
+	details?: string;
+}
+
+const { href, name, src, details } = Astro.props;
+---
+
+<li>
+	<a {href}>
+		<img {src} alt="Imagen para la categoría" width="140">
+		<h3>{name}</h3>
+		<p>{details}</p>
+	</a>
+</li>
+
+<style>
+	a {
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
+		text-decoration: none;
+	}
+	img {
+		width: calc(50vw - 20px);
+    	aspect-ratio: 1;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+</style>
